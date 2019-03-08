@@ -1,0 +1,72 @@
+.address {
+	word-wrap : break-word;
+}
+
+.error {
+	color : red;
+}
+
+.errorAddress {
+  color:  red;
+}
+
+.success {
+	color: green;
+}
+
+.headerAlign {
+    text-align: center;
+}
+
+.formHeight {
+  min-height: 562px;
+}
+.headerBg{
+  background: darkcyan;
+  border: 1px solid darkcyan;
+  color: white;
+  box-shadow: 1px 1px 1px 1px;
+}
+
+.BtnSearchId{
+  margin: 15px 0 0;
+}
+.padding0{
+  padding:5px 5px;
+}
+
+.btnAlign{
+  margin: 0 0 0px 9px;
+  font-size: 19px;
+  padding: 6px;
+}
+.width75{
+  width: 55%;
+  float: left;
+}
+.bgColor{
+  background: cadetblue;
+}
+.jumbotron {
+  background: white;
+}
+
+.centerAlign {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.colorRed{
+  color: green;
+  float: left;
+  width: 100%;
+}
+
+.colorGreen{
+  color: red;
+}
+.minHeightForReg{
+  min-height: 244px;
+}

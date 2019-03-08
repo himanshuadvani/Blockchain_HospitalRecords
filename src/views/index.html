@@ -1,0 +1,181 @@
+<% include header %>
+<div class="col-md-4">
+    <div class="jumbotron">
+        <div class="formHeight">
+            <h2 class="display-4">Doctor Details</h2>
+            <hr class="my-4">
+
+            <p>
+                <div class="form-group">
+                    <label for="vin">Doctor ID : </label>
+                    <input type="text" class="form-control numOnly" id="did" name="did" placeholder="Doctor ID"
+                        required />
+                    <span class="error1 colorGreen"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="vin">Doctor Name : </label>
+                    <input type="text" class="form-control" id="dname" name="dname" placeholder="Doctor Name"
+                        onkeypress="return checkNum(event)" />
+                    <span class="error2  colorGreen"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="vin">Doctor Email : </label>
+                    <input type="text" class="form-control" id="demail" name="demail" placeholder="Doctor Email"
+                        required />
+                    <span class="error3  colorGreen"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="vin">Doctor Contact Number : </label>
+                    <input type="text" class="form-control numOnly" id="dcnum" name="dcnum" placeholder="Doctor Contact Number"
+                        required />
+                    <span class="error4  colorGreen"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="vin">Doctor Education : </label>
+                    <input type="text" class="form-control" id="dedu" name="dedu" placeholder="Doctor Education"
+                        onkeypress="return checkNum(event)" />
+                    <span class="error5 colorGreen"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="vin">Doctor Address : </label>
+                    <input type="text" class="form-control" id="dadd" name="dadd" placeholder="Doctor Address">
+                    <span class="error6  colorGreen"></span>
+                </div>
+
+            </p>
+            <input type="button" class="btn btn-primary btn-lg" id="addDetails" value="Add Doctor Details">
+            <span class="success colorRed"></span>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="jumbotron">
+        <h2 class="display-4">Patient Details</h2>
+        <hr class="my-4">
+
+        <p>
+            <div class="form-group">
+                <label for="Patient">Patient Id </label>
+                <input type="text" class="form-control numOnly" id="pid" name="pid" placeholder="Patient ID" />
+                <span class="error7 colorGreen"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="Patient">Patient Name : </label>
+                <input type="text" class="form-control" id="pname" name="pname" placeholder="Patient Name" onkeypress="return checkNum(event)" />
+                <span class="error8  colorGreen"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="Patient">Patient Email : </label>
+                <input type="email" class="form-control" id="pemail" name="pemail" placeholder="Patient Email">
+                <span class="error9 colorGreen"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="Patient">Patient Contact Number : </label>
+                <input type="number" class="form-control numOnly" id="pcnum" name="pcnum" placeholder="Patient Contact Number">
+                <span class="error10 colorGreen"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="Patient">Patient Address : </label>
+                <input type="text" class="form-control" id="padd" name="padd" placeholder="Patient Address">
+                <span class="error11 colorGreen"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="Patient">Consulted Doctor : </label>
+                <input type="number" class="form-control numOnly" id="pcd" name="pcd" placeholder="Consulted Doctor">
+                <span class="error12 colorGreen"></span>
+            </div>
+
+        </p>
+        <input type="button" class="btn btn-primary btn-lg" id="addPatientDetails" value="Add Patient Details">
+        <span class="success1 colorRed"></span>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="jumbotron padding0">
+        <h2 class="display-4">Get Doctor Details</h2>
+        <div class="form-group">
+            <label for="Patient">Doctor Id : </label>
+            <div class="">
+                <input type="text" class="form-control width75 numOnly" id="d_id" name="d_id" placeholder="Doctor Id">
+                <input type="button" class="btn btn-primary btn-lg BtnSearchId btnAlign" id="btnGetDoctorDetails" value="Search">
+            </div>
+            <span class="success2 colorRed"></span>
+            <span class="error13 colorGreen"></span>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="jumbotron padding0">
+        <h2 class="display-4">Get Patient Details</h2>
+        <div class="form-group">
+            <label for="Patient">Patient Id : </label>
+            <div>
+                <input type="text" class="form-control width75 numOnly" id="p_id" name="p_id" placeholder="Patient Id">
+                <input type="button" class="btn btn-primary btn-lg BtnSearchId btnAlign" id="btnGetPatientDetails"
+                    value="Search">
+            </div>
+            <span class="success3 colorRed"></span>
+            <span class="error14 colorGreen"></span>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="jumbotron padding0 minHeightForReg">
+        <h2 class="display-4">Patient registration amount</h2>
+        <div class="form-group">
+            <input type="text" class="form-control numOnly" id="t_add" name="t_add" placeholder="_to">
+            <span class="error16 colorGreen"></span>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control numOnly" id="t_val" name="t_val" placeholder="_value">
+            <span class="error15 colorGreen"></span>
+        </div>
+        <input type="button" class="btn btn-primary btn-lg BtnSearchId btnAlign" id="btnSetToken" value="SendToken">
+        <span class="success4 colorRed"></span>
+    </div>
+</div>
+
+
+
+<div class="row" id="dotRow">
+    <!-- here will be added all doctor details -->
+</div>
+
+<div class="rowPat" id="patientRow">
+    <!-- here will be added all patient details -->
+</div>
+<script src="/js/transaction.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".numOnly").keypress(function (e) {
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                alert("Please enter only numbers");
+                return false;
+            }
+        });
+    });
+    function checkNum() {
+        if ((event.keyCode > 64 && event.keyCode < 91) || (event.keyCode > 96 && event.keyCode < 123) || event.keyCode == 8)
+            return true;
+        else {
+            alert("Please enter only characters");
+            return false;
+        }
+    }
+</script>
+<% include footer %>
